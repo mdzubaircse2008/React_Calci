@@ -1,0 +1,156 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0c1425;
+}
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background:
+    radial-gradient(circle at 15% 15%, #54209b, transparent 35%),
+    radial-gradient(circle at 85% 80%, #0876a5, transparent 35%),
+    #0c1425;
+}
+
+.calculator {
+  width: 375px;
+  padding: 27px 25px 22px;
+  background: rgba(17, 26, 45, 0.96);
+  border: 1px solid #30394c;
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  color: #a78bfa;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.header span {
+  color: #65738b;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.display {
+  height: 130px;
+  background: #050918;
+  border-radius: 20px;
+  padding: 22px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.expression {
+  color: #cbd5e1;
+  font-size: 25px;
+  min-height: 35px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.result {
+  color: #a78bfa;
+  font-size: 34px;
+  font-weight: bold;
+  margin-top: 8px;
+  text-shadow: 0 0 15px #9874ff;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  height: 63px;
+  border: none;
+  border-radius: 18px;
+  background: #222b3c;
+  color: #e2e8f0;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #344158;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.special {
+  background: #302033;
+  color: #ff6686;
+  border: 1px solid #54253e;
+}
+
+.operator {
+  background: #102c40;
+  color: #25c6ff;
+  border: 1px solid #174761;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.equal {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #a78bfa, #818cf8);
+  color: white;
+  box-shadow: 0 5px 25px rgba(139, 92, 246, 0.4);
+}
+
+.equal:hover {
+  background: linear-gradient(135deg, #b69cff, #929bff);
+}
+
+.footer {
+  color: #526078;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+
+@media (max-width: 420px) {
+  .calculator {
+    width: 100%;
+    max-width: 375px;
+    padding: 22px 18px;
+  }
+
+  button {
+    height: 58px;
+  }
+}
